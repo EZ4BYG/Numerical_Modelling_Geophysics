@@ -35,6 +35,7 @@ fontsize_small = 10;
 %% 2) Initialization: calculate related parameters
 h = 1 / (ny-1);     % grid spacing 
 dt = a * h^2 / k;   % time step
+% dt = 1.2 * a * h^2 / k;  % This is the maximum time step for stable simulation !!
 % set the initial Temperature field according to T0
 if strcmp(T0, 'Spike')
     T = zeros(ny, nx);    
@@ -48,6 +49,7 @@ end
 
 
 %% 3) Iteration: iteratively update and plot the Temperature field 
+Figure1 = figure('Position', [0 0 800 400]);  % create a new figure with 800 x 400 
 while t < t_end
     % Calculation the second-order derivative
     T = T + dt * k * Laplacian(T, h, nx, ny);  % update the T by calling function Laplacian
