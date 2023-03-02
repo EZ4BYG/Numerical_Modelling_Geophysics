@@ -3,6 +3,8 @@
 - e1_diffusion_heterogeneous.m  ->  the diffusivity coefficient $\kappa$ is a spatial function $\kappa(x,y)$
 - e1_diffusion_homogeneous.m  ->  the diffusivity coefficient $\kappa$ is a constant
 - Laplacian.m  -> function file
+- e1_python.py -> python version
+- e1_jupyter.ipynb -> jupyter notebook version
 
 # Numerical integration
 - e1_advanced.pdf  ->  the assignment document
